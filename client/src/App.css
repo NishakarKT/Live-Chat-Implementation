@@ -1,0 +1,68 @@
+.app {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.app__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
+}
+
+.app__chatBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 5px;
+  margin: 5px;
+  z-index: 1;
+}
+
+.app__chatBox::-webkit-scrollbar {
+  width: 3px;
+}
+
+.app__chatBox::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.app__send {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.app__send > .MuiTextField-root {
+  margin-bottom: 10px;
+}
+
+.app__send > .MuiButton-root {
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  background-color: #3f51b5;
+  text-transform: none;
+  transition: all 0.5s;
+}
+
+.app__send > .MuiButton-root:hover {
+  filter: brightness(90%);
+  transform: scale(1.01);
+  background-color: #3f51b5;
+}
